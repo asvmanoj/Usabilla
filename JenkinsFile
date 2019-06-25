@@ -2,7 +2,7 @@
 
  properties([
   parameters([
-    string(name: 'FEATURE_TAG', defaultValue: '@test', description: 'feature file tags' ),
+    string(name: 'FEATURE_TAG', defaultValue: '@signing', description: 'feature file tags' ),
     choice(name: 'ENVIRONMENT_RUN', choices: 'ST\nUT\nET\nPR', description: 'Environment to run' ,defaultValue: 'ST' )
   ])
 ])
@@ -26,7 +26,7 @@ node('windows'){
 		stage('Project Checkout'){
         		def git_branch='${BRANCH_NAME}'
 				jobStage='Project Checkout'
-				checkout([$class: 'GitSCM', branches: [[name: git_branch]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'selenium']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://p-bitbucket.nl.eu.abnamro.com:7999/scm/rcc/automationtesting.git']]])
+				checkout([$class: 'GitSCM', branches: [[name: git_branch]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'selenium']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'SMO_BUILDER', url: 'https://p-bitbucket.nl.eu.abnamro.com:7999/scm/smo/smo_automation_front_end.git']]])
 				echo 'code checkout done'
 			}
 		stage('Selenium Cucumber') {	  
