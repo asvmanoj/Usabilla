@@ -3,7 +3,6 @@
 .classpath
 .factorypath
 /target/
-/webdriver/
 /Screenshots/
 /browser/chrome/
 /browser/firefox/
