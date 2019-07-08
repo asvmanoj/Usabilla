@@ -37,7 +37,7 @@ Scenario: User sign the agreement record successfully
   Then I wait for 10 sec
   Then I take screenshot
   Then I forcefully click on element having "Sign_button"
-  Then I wait for 40 sec
+  Then I wait for 45 sec
   Then element having "Success_message" should have text as "Success Message"
   Then element having "Success_message_complete" should have text as "you have successfully signed the agreement"
   Then I take screenshot
