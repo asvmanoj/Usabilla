@@ -31,7 +31,7 @@ Scenario: User sign the agreement record successfully
   Then I wait for 2 sec
   Then I take screenshot
   When I forcefully click on element having "ToOndertekenennl_button"
-  Then I wait for 30 sec
+  Then I wait for 45 sec
   When I forcefully click on element having "Next_Sign_button"
   #Then element having "Consent_label" should have text as "Consent to document"
   Then I wait for 10 sec
