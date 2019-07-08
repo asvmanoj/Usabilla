@@ -10,7 +10,7 @@ Scenario: User sign the agreement record successfully
   Then I take screenshot
   Then element having "SignYourDocuments_label" should have text as "Sign your document(s)"
   Then element having "PersonalSignCode_label" should have text as "Personal Sign Code"
-  When I enter "a81021e0-d017-459d-8d89-e7654f146fd1" into input field having "SignCode_text"
+  When I enter "7a774965-5e95-4a8c-b0ca-c1b8a5d78586" into input field having "SignCode_text"
   Then I wait for 2 sec
   Then I take screenshot
   When I forcefully click on element having "Submit_button"
